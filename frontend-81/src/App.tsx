@@ -1,9 +1,10 @@
+import HomeLinks from "./container/HomeLinks.tsx";
 
 
 const App = () => {
     return (
-        <div>
-
+        <div className='container'>
+            <HomeLinks/>
         </div>
     );
 };
