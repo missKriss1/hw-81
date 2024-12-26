@@ -12,7 +12,7 @@ linksRouter.get('/:shortUrl', async (req, res, next) => {
     try{
         const link = await Link.findOne({shortUrl: req.params.shortUrl});
         if(link){
-            res.send(link);
+            return res.status(301).redirect(link.originalUrl);
         }else{
             res.status(404).send("Not Found");
         }
